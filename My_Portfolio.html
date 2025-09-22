@@ -2,19 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simon</title>
     <link rel="icon" href="favicon.ico" />
   </head>
   <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
       <h1>My Portfolio<sup>&reg;</sup></h1>
 
-      <!-- Navigation elements -->
+      <div>
+        <input type="text" id="search" value= "Find in Market" readonly />
+        <button for="search">Search</button>
+      </div>
+
       <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
         <menu>
           <li><a href="index.html">Home</a></li>
           <li><a href="My_Portfolio.html">My Portfolio</a></li>
@@ -22,8 +23,7 @@
           <li><a href="about.html">About</a></li>
         </menu>
       </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      
       <hr />
     </header>
 
@@ -47,10 +47,7 @@
         <span class="user-growth">+5%</span>
       </div>
       <br />
-
-      <div>
-        <button type="button">Deposit</button>
-
+      <div class="Stock-portfolio">
       <h1>Stocks</h1>
       <table>
         <thead>
@@ -67,7 +64,12 @@
             <td>Vanguard S&P 500 ETF</td>
             <td>$400.00</td>
             <td>+1.25%</td>
-
+          </tr>
+          <tr>
+            <td>VOO</td>
+            <td>Vanguard S&P 500 ETF</td>
+            <td>$400.00</td>
+            <td>+1.25%</td>
           </tr>
           <tr>
             <td>VOO</td>
@@ -83,14 +85,44 @@
           </tr>
         </tbody>
       </table>
+      </div>
+      <br />
+      <div class="News-portfolio">
+      <h1>News</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Title</th>
+            <th>Source</th>
+            <th>Published At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>VOO</td>
+            <td>Stock Market Today: Dow jumps 300 points as...</td>
+            <td>CNBC</td>
+            <td>June 2, 2024</td>
+          </tr>
+          <tr>
+            <td>VOO</td>
+            <td>Why Investors Are Bullish on Tech Stocks...</td>
+            <td>Bloomberg</td>
+            <td>June 1, 2024</td>
+          </tr>
+          <tr>
+            <td>VOO</td>
+            <td>Market Analysis: S&P 500 Hits New Highs...</td>
+            <td>Reuters</td>
+            <td>May 30, 2024</td>
+          </tr>
+        </tbody>
+
+
       <br />
 
-      </div>
-      <!-- More formatting with old style HTML -->
-
-
-
-
+        
       <br />
 
 
