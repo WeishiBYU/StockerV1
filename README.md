@@ -1,13 +1,14 @@
 # Quote Scheduling Website
 
-A React-based scheduling application built with Vite for carpet cleaning and upholstery services. The application guides users through a three-stage process: quote generation, scheduling, and confirmation.
+A React-based scheduling application built with Vite for carpet cleaning and upholstery services. The application guides users through a four-stage process: quote generation, scheduling, information collection, and confirmation.
 
 ## Project Overview
 
 This is a multi-stage booking system that allows customers to:
 1. Generate quotes for carpet cleaning and upholstery services
 2. Schedule appointments using an interactive calendar
-3. Confirm their booking details and pricing
+3. Provide detailed information and complete the booking process
+4. Confirm their booking details and pricing
 
 ## Tech Stack
 
@@ -33,14 +34,20 @@ This is a multi-stage booking system that allows customers to:
 - Date and time selection
 - Persistent price display from Stage 1
 
-### Stage 3: Confirmation
-- Review of selected services
+### Stage 3: Information Collection
+- Detailed customer information input
+- Contact details and preferences
+- Special instructions and requirements
+- Customer details form completion
+
+### Stage 4: Confirmation
+- Review of selected services and information
 - Final pricing breakdown
-- Booking confirmation
-- User details collection
+- Complete booking submission
+- Final booking confirmation
 
 ### Persistent Price Tracker
-- Component appears on all three stages
+- Component appears on all four stages
 - Real-time price updates
 - Service breakdown display
 - Persistent across navigation
@@ -67,7 +74,7 @@ This is a multi-stage booking system that allows customers to:
 - [ ] Create placeholder components for all stages
 
 **Testing Criteria:**
-- [ ] Navigation between all three stages works
+- [ ] Navigation between all four stages works
 - [ ] URL changes reflect current stage
 - [ ] Back/forward browser buttons work correctly
 
@@ -80,7 +87,7 @@ This is a multi-stage booking system that allows customers to:
 - [ ] Ensure component appears on all stages
 
 **Testing Criteria:**
-- [ ] Price tracker visible on all three stages
+- [ ] Price tracker visible on all four stages
 - [ ] Price updates reflect service selections
 - [ ] Component maintains state across navigation
 - [ ] Price breakdown is accurate and clear
@@ -110,21 +117,39 @@ This is a multi-stage booking system that allows customers to:
 - [ ] Only available dates are selectable
 - [ ] Time slots show availability accurately
 - [ ] Selected services and pricing carry over from Stage 1
-- [ ] User can proceed to Stage 3 with valid selections
+- [ ] User can proceed to Stage 3 (Information Collection) with valid selections
 
-#### Checkpoint 2.4: Stage 3 - Confirmation
-- [ ] Create booking summary display
-- [ ] Implement final price breakdown
-- [ ] Add user contact information form
-- [ ] Create confirmation submission
-- [ ] Display booking confirmation
+#### Checkpoint 2.4: Stage 3 - Information Collection
+- [ ] Create comprehensive information input form
+- [ ] Implement customer contact details collection
+- [ ] Add special instructions/requirements field
+- [ ] Add service preferences options
+- [ ] Create proceed to confirmation functionality
+- [ ] Validate and store customer information
 
 **Testing Criteria:**
-- [ ] All selected services are displayed correctly
+- [ ] All required information fields are present
+- [ ] Form validation works for required fields
+- [ ] Optional fields handle empty values correctly
+- [ ] User can proceed to Stage 4 (Final Confirmation)
+- [ ] Customer information is properly validated and stored
+- [ ] Navigation to next stage works correctly
+
+#### Checkpoint 2.5: Stage 4 - Final Confirmation
+- [ ] Create comprehensive booking review display
+- [ ] Implement final price breakdown with all details
+- [ ] Show all collected customer information
+- [ ] Create final booking submission
+- [ ] Display booking confirmation message
+- [ ] Generate booking reference/confirmation number
+
+**Testing Criteria:**
+- [ ] All selected services and information are displayed correctly
 - [ ] Final pricing matches previous stages
-- [ ] Contact form validates required fields
-- [ ] Confirmation submission works
-- [ ] Success message displays after submission
+- [ ] Customer information is accurately displayed
+- [ ] Final booking submission processes successfully
+- [ ] Confirmation message displays with complete booking details
+- [ ] Booking reference number is generated and displayed
 
 ### Phase 3: Enhancement & Polish
 
@@ -183,10 +208,16 @@ src/
 │   │   ├── SchedulingForm.jsx
 │   │   ├── Calendar.jsx
 │   │   └── TimeSlots.jsx
-│   └── stage3/
+│   ├── stage3/
+│   │   ├── InformationForm.jsx
+│   │   ├── CustomerDetails.jsx
+│   │   ├── SpecialInstructions.jsx
+│   │   └── ServicePreferences.jsx
+│   └── stage4/
 │       ├── ConfirmationForm.jsx
 │       ├── BookingSummary.jsx
-│       └── ContactForm.jsx
+│       ├── BookingReview.jsx
+│       └── FinalConfirmation.jsx
 ├── hooks/
 │   ├── useBooking.js
 │   ├── usePricing.js
