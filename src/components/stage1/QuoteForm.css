@@ -3,47 +3,148 @@
   margin-bottom: 0.5rem;
 }
 
-.service-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+.service-accordions {
   margin: 2rem 0;
 }
 
-.service-card {
+.accordion-item {
   border: 2px solid #e9ecef;
   border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background-color: #e9ecef;
+}
+
+.accordion-header.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  color: inherit;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  padding: 1.5rem;
+  background-color: white;
+  border-top: 1px solid #e9ecef;
+}
+
+.accordion-content p {
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+.carpet-services-table,
+.upholstery-services-table {
+  overflow-x: auto;
+}
+
+.carpet-services-table table,
+.upholstery-services-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.carpet-services-table th,
+.carpet-services-table td,
+.upholstery-services-table th,
+.upholstery-services-table td {
+  padding: 1rem;
   text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.carpet-services-table th,
+.upholstery-services-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.carpet-services-table .area-label,
+.upholstery-services-table .furniture-label {
+  text-align: left;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
   transition: border-color 0.3s ease;
 }
 
-.service-card:hover {
+.quantity-input:focus {
+  outline: none;
   border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
-.service-card h3 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.service-card p {
-  color: #6c757d;
-  margin-bottom: 1rem;
+.quantity-input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
 }
 
-.service-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
+.upholstery-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.service-button:hover {
-  background-color: #0056b3;
+.checkbox-label:hover {
+  background-color: #f8f9fa;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #007bff;
 }
 
 .form-navigation {
