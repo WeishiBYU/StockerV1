@@ -1,0 +1,49 @@
+.confirmation-form h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.booking-summary {
+  margin: 2rem 0;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.summary-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.summary-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.summary-section h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.summary-section p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.total-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745 !important;
+}
+
+.confirmation-actions {
+  margin-top: 2rem;
+}
+
+.confirm-button {
+  background-color: #28a745;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
