@@ -6,18 +6,18 @@ const QuoteForm = () => {
   const navigate = useNavigate();
   const [openAccordion, setOpenAccordion] = useState(null);
   const [carpetServices, setCarpetServices] = useState({
-    rooms: { cleaned: 0, deodorized: 0, stains: 0 },
-    halls: { cleaned: 0, deodorized: 0, stains: 0 },
-    staircases: { cleaned: 0, deodorized: 0, stains: 0 },
-    walkInClosets: { cleaned: 0, deodorized: 0, stains: 0 },
-    landings: { cleaned: 0, deodorized: 0, stains: 0 }
+    rooms: { cleaned: 0 },
+    halls: { cleaned: 0 },
+    staircases: { cleaned: 0 },
+    walkInClosets: { cleaned: 0 },
+    landings: { cleaned: 0 }
   });
   
   const [upholsteryServices, setUpholsteryServices] = useState({
-    sofas: { cleaned: 0, deodorized: 0, stains: 0 },
-    sectionals: { cleaned: 0, deodorized: 0, stains: 0 },
-    loveSeats: { cleaned: 0, deodorized: 0, stains: 0 },
-    chairs: { cleaned: 0, deodorized: 0, stains: 0 }
+    sofas: { cleaned: 0 },
+    sectionals: { cleaned: 0 },
+    loveSeats: { cleaned: 0 },
+    chairs: { cleaned: 0 }
   });
 
   const handleNext = () => {
@@ -90,9 +90,7 @@ const QuoteForm = () => {
                   <thead>
                     <tr>
                       <th>Area</th>
-                      <th>Cleaned</th>
-                      <th>Deodorized</th>
-                      <th>Stain Removal</th>
+                      <th>Quantity</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -115,24 +113,6 @@ const QuoteForm = () => {
                                 onClick={() => handleCarpetServiceChange(area, 'cleaned', carpetServices[area].cleaned + 1)}
                                 className="quantity-btn"
                               >+</button>
-                        </td>
-                        <td>
-                          <input
-                            type="number"
-                            min="0"
-                            value={carpetServices[area].deodorized}
-                            onChange={(e) => handleCarpetServiceChange(area, 'deodorized', e.target.value)}
-                            className="quantity-input"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            type="number"
-                            min="0"
-                            value={carpetServices[area].stains}
-                            onChange={(e) => handleCarpetServiceChange(area, 'stains', e.target.value)}
-                            className="quantity-input"
-                          />
                         </td>
                       </tr>
                     ))}
@@ -162,9 +142,7 @@ const QuoteForm = () => {
                   <thead>
                     <tr>
                       <th>Furniture Type</th>
-                      <th>Cleaned</th>
-                      <th>Deodorized</th>
-                      <th>Stain Removal</th>
+                      <th>Quantity</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -177,24 +155,6 @@ const QuoteForm = () => {
                             min="0"
                             value={upholsteryServices[furniture].cleaned}
                             onChange={(e) => handleUpholsteryServiceChange(furniture, 'cleaned', e.target.value)}
-                            className="quantity-input"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            type="number"
-                            min="0"
-                            value={upholsteryServices[furniture].deodorized}
-                            onChange={(e) => handleUpholsteryServiceChange(furniture, 'deodorized', e.target.value)}
-                            className="quantity-input"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            type="number"
-                            min="0"
-                            value={upholsteryServices[furniture].stains}
-                            onChange={(e) => handleUpholsteryServiceChange(furniture, 'stains', e.target.value)}
                             className="quantity-input"
                           />
                         </td>
