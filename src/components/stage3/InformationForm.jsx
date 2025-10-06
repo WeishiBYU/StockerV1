@@ -22,21 +22,25 @@ const InformationForm = () => {
         <div className="form-group">
           <label htmlFor="name">Full Name *</label>
           <input type="text" id="name" name="name" required />
+          <small className="field-description">Enter your full legal name for the service agreement</small>
         </div>
         
         <div className="form-group">
           <label htmlFor="email">Email Address *</label>
           <input type="email" id="email" name="email" required />
+          <small className="field-description">We'll send your booking confirmation and updates to this email</small>
         </div>
         
         <div className="form-group">
           <label htmlFor="phone">Phone Number *</label>
           <input type="tel" id="phone" name="phone" required />
+          <small className="field-description">Used to contact you for scheduling or service updates</small>
         </div>
         
         <div className="form-group">
           <label htmlFor="address">Service Address *</label>
           <textarea id="address" name="address" rows="3" required></textarea>
+          <small className="field-description">Complete address where the cleaning service will be performed</small>
         </div>
         
         <div className="form-group">

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SchedulingForm.css';
 
-const SchedulingForm = () => {
+const SchedulingForm  = () => {
   const navigate = useNavigate();
 
   const handleNext = () => {
@@ -12,7 +12,7 @@ const SchedulingForm = () => {
   const handleBack = () => {
     navigate('/quote');
   };
-
+  
   return (
     <div className="scheduling-form">
       <h2>Step 2: Schedule Your Service</h2>
