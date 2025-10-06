@@ -38,3 +38,11 @@
   resize: vertical;
   font-family: inherit;
 }
+
+.field-description {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6c757d;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
