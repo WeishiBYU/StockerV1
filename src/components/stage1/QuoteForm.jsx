@@ -4,7 +4,7 @@ import './QuoteForm.css';
 
 const QuoteForm = () => {
   const navigate = useNavigate();
-  const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAccordion, setOpenAccordion] = useState('both');
   const [carpetServices, setCarpetServices] = useState({
     rooms: { cleaned: 0 },
     halls: { cleaned: 0 },
@@ -74,14 +74,14 @@ const QuoteForm = () => {
         {/* Carpet Cleaning Accordion */}
         <div className="accordion-item">
           <div 
-            className={`accordion-header ${openAccordion === 'carpet' ? 'active' : ''}`}
+            className={`accordion-header ${(openAccordion === 'carpet' || openAccordion === 'both') ? 'active' : ''}`}
             onClick={() => toggleAccordion('carpet')}
           >
             <h3>Carpet Cleaning</h3>
             <span className="accordion-icon">{openAccordion === 'carpet' ? '−' : '+'}</span>
           </div>
           
-          {openAccordion === 'carpet' && (
+          {(openAccordion === 'carpet' || openAccordion === 'both') && (
             <div className="accordion-content">
               <p>Select areas and services for carpet cleaning:</p>
               
@@ -126,14 +126,14 @@ const QuoteForm = () => {
         {/* Upholstery Cleaning Accordion */}
         <div className="accordion-item">
           <div 
-            className={`accordion-header ${openAccordion === 'upholstery' ? 'active' : ''}`}
+            className={`accordion-header ${(openAccordion === 'upholstery' || openAccordion === 'both') ? 'active' : ''}`}
             onClick={() => toggleAccordion('upholstery')}
           >
             <h3>Upholstery Cleaning</h3>
             <span className="accordion-icon">{openAccordion === 'upholstery' ? '−' : '+'}</span>
           </div>
           
-          {openAccordion === 'upholstery' && (
+          {(openAccordion === 'upholstery' || openAccordion === 'both') && (
             <div className="accordion-content">
               <p>Select furniture and services for upholstery cleaning:</p>
               
@@ -150,6 +150,10 @@ const QuoteForm = () => {
                       <tr key={furniture}>
                         <td className="furniture-label">{furnitureLabels[furniture]}</td>
                         <td>
+                            <button 
+                                onClick={() => handleUpholsteryServiceChange(furniture, 'cleaned', upholsteryServices[furniture].cleaned - 1)}
+                                className="quantity-btn"
+                              >-</button>
                           <input
                             type="number"
                             min="0"
@@ -157,6 +161,10 @@ const QuoteForm = () => {
                             onChange={(e) => handleUpholsteryServiceChange(furniture, 'cleaned', e.target.value)}
                             className="quantity-input"
                           />
+                            <button 
+                                onClick={() => handleUpholsteryServiceChange(furniture, 'cleaned', upholsteryServices[furniture].cleaned + 1)}
+                                className="quantity-btn"
+                              >+</button>
                         </td>
                       </tr>
                     ))}
