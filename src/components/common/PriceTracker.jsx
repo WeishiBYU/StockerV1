@@ -4,7 +4,11 @@ import './PriceTracker.css';
 const PriceTracker = () => {
   // TODO: Connect to global state management
   const selectedServices = [];
-  const totalPrice = 0;
+  function calculateTotalPrice() {
+    let totalPrice = 0;
+    
+    return totalPrice;
+  }
 
   return (
     <div className="price-tracker">
@@ -24,7 +28,8 @@ const PriceTracker = () => {
       </div>
       
       <div className="price-total">
-        <strong>Total: ${totalPrice.toFixed(2)}</strong>
+        <strong>Total: ${calculateTotalPrice().toFixed(2)}</strong>
+        
       </div>
       
       <div className="price-note">

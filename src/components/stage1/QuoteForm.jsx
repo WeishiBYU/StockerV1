@@ -100,6 +100,10 @@ const QuoteForm = () => {
                       <tr key={area}>
                         <td className="area-label">{areaLabels[area]}</td>
                         <td>
+                              <button 
+                                onClick={() => handleCarpetServiceChange(area, 'cleaned', carpetServices[area].cleaned - 1)}
+                                className="quantity-btn"
+                              >−</button>
                           <input
                             type="number"
                             min="0"
@@ -107,6 +111,10 @@ const QuoteForm = () => {
                             onChange={(e) => handleCarpetServiceChange(area, 'cleaned', e.target.value)}
                             className="quantity-input"
                           />
+                              <button 
+                                onClick={() => handleCarpetServiceChange(area, 'cleaned', carpetServices[area].cleaned + 1)}
+                                className="quantity-btn"
+                              >+</button>
                         </td>
                         <td>
                           <input
