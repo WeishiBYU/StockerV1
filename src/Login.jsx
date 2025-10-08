@@ -1,9 +1,10 @@
 // filepath: c:\Users\Winst\Documents\StockerV1\src\App.jsx
 import Header from './Header.jsx'
+import Footer from './Footer.jsx'
 
-function App() {
+function Login() {
   return (
-    <div className="App">
+    <div className="Login">
       <Header />
       
       <main>
@@ -32,14 +33,9 @@ function App() {
         </div>
       </main>
 
-      <footer className="navbar bg-body-tertiary mt-auto">
-        <div className="container-fluid">
-          <span className="navbar-text">Author Name(s)</span>
-          <a className="navbar-brand" href="https://github.com/WeishiBYU/StockerV1">GitHub</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
 
-export default App
+export default Login
