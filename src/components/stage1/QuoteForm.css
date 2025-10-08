@@ -1,0 +1,182 @@
+.quote-form h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.service-accordions {
+  margin: 2rem 0;
+}
+
+.accordion-item {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background-color: #e9ecef;
+}
+
+.accordion-header.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  color: inherit;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  padding: 1.5rem;
+  background-color: white;
+  border-top: 1px solid #e9ecef;
+}
+
+.accordion-content p {
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+.carpet-services-table,
+.upholstery-services-table {
+  overflow-x: auto;
+}
+
+.carpet-services-table table,
+.upholstery-services-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.carpet-services-table th,
+.carpet-services-table td,
+.upholstery-services-table th,
+.upholstery-services-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.carpet-services-table th,
+.upholstery-services-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.carpet-services-table .area-label,
+.upholstery-services-table .furniture-label {
+  text-align: left;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.upholstery-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-label:hover {
+  background-color: #f8f9fa;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #007bff;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.next-button, .back-button, .confirm-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.next-button, .confirm-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.next-button:hover, .confirm-button:hover {
+  background-color: #218838;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #545b62;
+}
